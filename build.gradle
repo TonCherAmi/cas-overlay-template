@@ -70,8 +70,12 @@ apply from: rootProject.file("gradle/springboot.gradle")
 apply from: rootProject.file("gradle/dockerjib.gradle")
 
 dependencies {
-    // Other CAS dependencies/modules may be listed here...
-    // implementation "org.apereo.cas:cas-server-support-json-service-registry:${casServerVersion}"
+    // Module dependencies
+    compile "org.apereo.cas:cas-server-support-ldap:${project.'cas.version'}"
+    compile "org.apereo.cas:cas-server-support-reports:${project.'cas.version'}"
+    compile "org.apereo.cas:cas-server-support-yaml-service-registry:${project.'cas.version'}"
+    compile "org.apereo.cas:cas-server-support-oauth-webflow:${project.'cas.version'}"
+    compile "org.apereo.cas:cas-server-support-redis-ticket-registry:${project.'cas.version'}"
 }
 
 tasks.findByName("jibDockerBuild")
