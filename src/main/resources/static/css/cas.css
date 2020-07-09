@@ -28,6 +28,10 @@ button {
   cursor: pointer;
 }
 
+.hidden {
+  display: none;
+}
+
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -150,6 +154,7 @@ button {
   font-size: inherit;
   line-height: inherit;
   color: #383838;
+  outline: none;
 }
 
 .input::placeholder {
@@ -184,6 +189,7 @@ input[type="password"] {
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
+  outline: none;
 }
 
 .button:hover,
